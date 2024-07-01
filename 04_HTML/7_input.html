@@ -136,5 +136,27 @@
     <option value="benz">benz</option>
     <option value="audi" selected>audi</option>
   </select>
+
+  <hr>
+  
+  <!-- 여러 줄 입력 -->
+  <p>
+  <label for="multi">여러 줄 텍스트 입력 :</label>
+  </p>
+  <!--                     열     행 -->
+  <textarea id="multi" cols="30" rows="6"></textarea>
+  <br>
+  <!-- 스펠링 체크 없애기 -->
+  <textarea id="multi" cols="30" rows="6" spellcheck="false"></textarea>
+  <!-- 크기조정 막기 -->
+  <textarea id="multi" cols="30" rows="6" style="resize: none;"></textarea>
+  <br>
+  <!-- (참고) form: 사용자가 입력한 내용을 어떤 서버 경로로, 어떤 방식(GET, POST)으로 전달할지 설정 -->
+  <form action="/login" method="get">
+    <!-- name 속성: 서버로 전달될 때 유니크하게 구분하기 위한 이름 -->
+    <input type="text" name="id">
+    <input type="password" name="pw">
+    <button type="submit">로그인</button>
+  </form>
   </body>
 </html>
