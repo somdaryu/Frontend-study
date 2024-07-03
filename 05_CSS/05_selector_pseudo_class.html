@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 1.(어떠한 행동을 했을 때 동작하는) 가상클래스 선택자 */
+    /* :hover : 마우스커서가 올라가 있는 동안 선택 */
+    a:hover {color: red;}
+    .box {width: 100px; height: 100px; background-color: orange;}
+    /* .box:hover {width: 200px; background-color: pink; transition: 1s;} */
+
+    /* :active : 마우스를 클릭하고 있는 동안 선택 */
+    a:active{color: lime;}
+    .box:active {width: 200px; background-color: pink; transition: 1s;}
+
+    /* :focus : 요소가 활성화되면 선택 */
+    /* HTML 대화형 요소에만 사용 가능
+      예: input, a, button, label, select, textarea 등
+    */
+    input:focus {background-color: orange;}
+
+    /* 2.특정한요소를 선택하는 가상 클래스 선택자 */
+    /*:first-child 첫번째 자식 요소
+      :last-child 마지막 자식요소
+    */
+    /* .fruits :first-child{color: red;}
+
+    .fruits h3:last-child {color: red;} */
+
+    /* :nth-child() :n번째 자식 요소 */
+
+    /* .fruits :nth-child(2){color: red;} */
+    .fruits *:nth-child(2n){color: red;}
+  </style>
+</head>
+<body>
+  <a href="https://www.naver.com">NAVER</a>
+  <div class="box"></div>
+  
+  <hr>
+  <input type="text">
+
+  <hr>
+  <div class="fruits">
+    <span>딸기</span>
+    <span>수박</span>
+    <div>오렌지</div>
+    <p>망고</p>
+    <h3>사과</h3>
+  </div>
+</body>
+</html>
