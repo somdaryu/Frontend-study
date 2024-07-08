@@ -32,7 +32,28 @@
     /* :nth-child() :n번째 자식 요소 */
 
     /* .fruits :nth-child(2){color: red;} */
-    .fruits *:nth-child(2n){color: red;}
+
+    /* 
+      짝수를 의미
+    .fruits *:nth-child(2n){color: red;} 
+    .fruits *:nth-child(even){color: red;}
+    */
+
+    /* 홀수를 의미 
+      .fruits *:nth-child(odd){color: red;}
+    */
+
+
+    /* Quiz: 자식들 중 앞에 3개만 선택 */
+    /* n이 앞에 나와야 동작!! 
+      .fruits *:nth-child(-n+3){color: red;}
+    */
+
+    /* :not(s) 선택자 s를 제외 
+      .fruits *:not(span, h3) {color: red;}
+    */
+
+    
   </style>
 </head>
 <body>
