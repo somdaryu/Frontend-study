@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent{
+      width: 200px;
+      height: 150px;
+      background-color: pink;
+      margin: 20px;
+      padding: 20px;
+      overflow: auto;
+      /* 내용이 넘친 요소에 부모영역에 줘야함 기본값 visible
+      hidden : 넘친 내용을 잘라냄
+      scroll : 넘친만큼 잘라내고 스크롤바가 무조건 생김(잘안씀)
+      auto : 넘친만큼 잘라내고 스크롤바가 안넘치면 안생김
+      */
+    }
+
+    .child{
+      width: 300px;
+      height: 100px;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</body>
+</html>
