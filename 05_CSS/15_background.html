@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test{ width: 200px; height: 200px; 
+    /*배경색을 안넣으면 기본이 투명색*/ 
+    background-color: orange; 
+    background-image: url("images/logo.png");
+    /* 사이즈 조정 가능 */
+    background-size: 200px;
+    /* 기본적으로 반복해서 출력 */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .container-1{
+    width: 800px; 
+    height: 500px; 
+    background-color: orange; 
+    background-image: url("images/logo_resize.png"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 단위를 입력 : x축에서의 거리, y축에서 거리 */
+    background-size: contain;
+    /* 앞 가로 뒤 세로 (세로는 비율에 맞게 자동 지정) */
+  }
+
+  .container-2{height: 800px; background-color: green;}
+  .fixed-bg{height: 200px; background-color: pink; background-image: url("images/logo.png"); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; /*특정 섹션의 뒷배경으로 이미지가 고정되서 요소는 올라가는데 이미지는 멈춰있으면 이런 것을 배경 이미지 시차효과(parallax)라 부름*/}
+  </style>
+</head>
+<body>
+  <div class="test"></div>
+
+  <br><br>
+
+  <div class="container-1"></div>
+
+  <br><br>
+
+  <p>fixed: 배경 이미지를 뷰포트에 고정, 스크롤 되지 않음</p>
+  <div class="fixed-bg"></div>
+  <div class="container-2">스크롤링 하기 위한 800px 높이의 영역</div>
+  </div>
+
+  <!-- (정리) Quiz
+  Q1: 요소 배경에 이미지를 삽입하는 속성은?
+  A1: background-image
+
+  Q2: 요소 배경에 이미지를 삽입할 때 사용하는 함수는?
+  A2: url()
+
+  Q3: 배경 이미지를 반복하지 않는 속성 값은?
+  A3: background-repeat : no-repeat
+
+  Q4: 요소가 스크롤 될 때 배경 이미지는 뷰포트에 고정되는 속성 값은?
+  A4: background-attachment : fixed
+-->
+</body>
+</html>
