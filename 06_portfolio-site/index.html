@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유다솜 포트폴리오</title>
+  <!-- 파비콘 적용 -->
+  <!-- 파비콘(favicon.ico)은 프로젝트 폴더의 최상위(Root) 경로에 포함시키면 자동 적용
+  최상위 경로에 없거나, ico가 아닌 별도 파일을 가진 경우에는 <link>로 적용
+  
+  (참고)파비콘 만들기: https://iconifier.net
+  -->
+  <link rel="icon" href="favicon.ico">
+  <!-- reset css 적용 -->
+  <!-- 브라우저별로 다른 기본 스타일이 적용되는 것을 초기화 -->
+  <link href="
+  https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
+  " rel="stylesheet">
+  <!-- 구글 머터리얼 아이콘 -->
+  <!-- 구글에서 제공하는 머티리얼 스타일 아이콘, 글자처럼 취급 가능한 장점 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css">
+
+  <!-- 구글 웹폰트 연결 -->
+  <!-- 오픈 라이선스 폰트, 한글 지원하는지 확인 및 필요한 굵기를 연결 -->
+  <!-- 한글 : Noto sans korean, 영문 : open sans  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <!-- logo -->
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="logo">
+      </a>
+
+      <!-- menu -->
+      <nav class="font-en">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#work">WORK</a></li>
+          <li><a href="#contack">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- visual -->
+  <!-- 배경 비디오 적용(또는 슬라이드로 만들고 싶으면 swiper 참고) -->
+  <section class="visual">
+    <video autoplay muted loop>
+      <source src="videos/movie2.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- about -->
+   <section id="about" class="about">
+    <div class="inner">
+      <h2 class="title font-en">ABOUT</h2>
+      <div class="about__wrapper">
+        <div class="about__img">
+          <!-- 본인 프로필 이미지로 변경 -->
+          <img src="images/profile.jpg" alt="프로필">
+        </div>
+
+        <div class="about__text">
+          <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
+          <strong class="slogan font-en">Simple is Best</strong>
+          <h3 class="font-en">Yoo Da Som</h3>
+          <div>
+            <h4 class="font-en">Education</h4>
+              <ul>
+                <li>10.03 ~ 12.02 명지전문대학교 정보통신공학과 졸업</li>
+                <li>24.06 ~ 24.12 풀스택 개발자 과정 수료</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+</body>
+</html>
