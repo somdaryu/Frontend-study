@@ -16,6 +16,19 @@ body{
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-button{
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333335;
+  border-radius: 5px;
+}
 a{
   text-decoration: none;
   color: inherit;
@@ -32,6 +45,8 @@ a{
   margin: 0 auto;
 }
 
+.relative {position: relative;}
+
 img {
   display: block;
 }
@@ -40,7 +55,7 @@ img {
   font-size: 50px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   color: #e73c7e;
 }
 
@@ -55,11 +70,11 @@ img {
 
 .btn {
   width: 120px;
-  padding: 10px;
+  height: 40px;
   display: block; /*a, span같은 인라인 요소를 버튼으로 사용할수도 있으니 블록으로 지정*/
   border: 2px solid #333;
   border-radius: 4px;
-  font-size:  24px;
+  font-size:  18px;
   font-weight: 700;
   text-align: center;
   cursor: pointer;
@@ -67,6 +82,7 @@ img {
 }
 
 .btn-group {
+  height: 40px;
   display: flex;
 }
 
@@ -216,7 +232,7 @@ header nav > ul > li > a:hover {
 }
 
 .visual > .inner .vc__bottom {
-  width: 460px;
+  width: 420px;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -230,6 +246,11 @@ header nav > ul > li > a:hover {
 
 .visual > .inner .vc__bottom li {
   flex: 1;
+  font-size: 14px;
+}
+.visual > .inner .vc__bottom li > img {
+  width: 16px;
+  object-fit: contain;
 }
 
 
@@ -248,37 +269,74 @@ header nav > ul > li > a:hover {
 /* ABOUT */
 .about {
   margin-top: 100vh;
-  padding-top: 200px;
+  padding-top: 120px;
 }
 
 .about .inner {
   padding-bottom: 30px;
-  position: relative;
 }
 
 .about .about__wrapper {
+  width: 100%;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .about .about__wrapper .about__img {
-  width: 40%;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 50%;
 }
 
 .about .about__wrapper .about__img img {
   width: 100%;
+  height: 100%;
 }
 .about .about__wrapper .about__text {
-  width: 55%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+}
+
+.about .about__wrapper .about__text ul {
+  margin-bottom: 40px;
+}
+
+.about .about__wrapper .about__text:nth-child(1) {
+  width: 40%;
+  padding: 0 40px;
+}
+
+.about .about__wrapper .about__text:nth-child(2){
+  width: 40%;
 }
 
 .about .about__wrapper .about__text .slogan {
   font-weight: 700;
-  font-size: 35px;
+  font-size: 24px;
+  color: #f8c3d3;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.about .about__wrapper .about__text .slogan_ko {
+  font-size: 18px;
+  color: #535353;
+}
+.about .about__wrapper .about__text .about__name p:nth-child(1) {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.about .about__wrapper .about__text .about__name p:nth-child(2){
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.about .about__wrapper .about__text .about__edu {
+  padding-top: 20px;
 }
 
 .about .about__wrapper .about__text h3 {
@@ -289,37 +347,33 @@ header nav > ul > li > a:hover {
 .about .about__wrapper .about__text h4 {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 16px;
 }
 
 .about .about__wrapper .about__text li {
   line-height: 1.8;
 }
 
-.about .about__btn {
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-}
-
-
-.about .about__btn img {
-  display: inline;
-  width: 28px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
 /* SKILL */
 
 .skill {
-  padding-top: 200px;
+  padding-top: 120px;
+}
+
+.skill-title {
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 5px
 }
 
 .skill .skill__list {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
+  padding: 30px 0;
 }
 
 .skill .skill__list > li {
@@ -362,16 +416,18 @@ header nav > ul > li > a:hover {
 }
 
 .skill .skill__list li div {
-  width: 80px;
-  height: 50px;
-  background-color: #b9e3f9;
-  border-radius: 50%;
+  height: 30px;
+  margin-bottom: 20px;
   transform: rotate(-20deg);
   transition: 0.5s;
+  color: #d8d8d8;
+  border-radius: 50%;
 }
+
 
 .skill .skill__list li div:hover {
   transform: rotate(0);
+  color: #e73c7e;
 }
 
 .skill .skill__list li div p {
@@ -381,19 +437,20 @@ header nav > ul > li > a:hover {
 }
 
 .skill .skill__list li h3 {
+  display: block;
   font-size: 18px;
   font-weight: 700;
-  margin: 30px 0 20px;
+  margin: 20px 0;
 }
 
 /* WORK */
 .work {
-  padding-top: 200px;
+  padding-top: 120px;
 }
 
 .work .port {
   display: flex;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 .work .port .port__img,
@@ -408,19 +465,37 @@ header nav > ul > li > a:hover {
 
 .work .port .port__text {
   font-size: 14px;
-  padding: 30px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .work .port .port__text h3 {
+  height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
   font-size: 20px;
   font-weight: 700;
 }
-
+.work .port .port__text ul {
+  height: calc(100% - 72px);
+  padding: 20px 0;
+}
 .work .port .port__text li {
   line-height: 1.8;
+}
+.work .port .port__text ul li:nth-child(2){
+  max-height: 212px;
+  overflow-y: auto;
+  padding: 20px 20px 10px 0;
+}
+
+
+.work .port .port__text ul li:nth-child(2)::-webkit-scrollbar-thumb {
+  background-color: #e73c7e;
+  border-radius: 5px;
 }
 
 .work .port .port__text li span {
