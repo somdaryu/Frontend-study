@@ -91,8 +91,10 @@ spyEls.forEach(function(spyEl){
 
 //모달창 띄우기
 let modalEl = document.querySelector('#modal');
+let modalEl2 = document.querySelector('#modal2');
 let modalBtn = document.querySelectorAll('.port .btn-modal');
 let closeBtn = document.querySelector('#modal .btn-close');
+let closeBtn2 = document.querySelector('#modal2 .btn-close');
 console.log(modalBtn);
 console.log(closeBtn);
 
@@ -100,8 +102,16 @@ modalBtn[0].addEventListener('click', function(){
   modalEl.style.display = 'flex';
 });
 
+modalBtn[1].addEventListener('click', function(){
+  modalEl2.style.display = 'flex';
+});
+
 closeBtn.addEventListener('click', function(){
   modalEl.style.display = 'none';
+});
+
+closeBtn2.addEventListener('click', function(){
+  modalEl2.style.display = 'none';
 });
 
 // 현재 연도 표시

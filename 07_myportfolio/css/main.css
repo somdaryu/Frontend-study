@@ -106,14 +106,14 @@ img {
   color: #fff;
 }
 
-.btn.btn--brown {
-  color: #592b18;
-  border-color: #592b18;
+.btn.btn--pink {
+  color: #e73c7e;
+  border-color: #e73c7e;
 }
 
-.btn.btn--brown:hover{
+.btn.btn--pink:hover{
   color: #fff;
-  background-color: #592b18;
+  background-color: #e73c7e;
 }
 
 /* HEADER */
@@ -395,9 +395,33 @@ header nav > ul > li > a:hover {
   width: 100%;
 }
 
+.skill .inner .list-caption {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.skill .inner .list-caption ul {
+  width: 250px;
+  font-size: 14px;
+  padding: 10px;
+  background: #F6F6F6;
+  border-radius: 5px;
+}
+.skill .inner .list-caption ul li:first-child{
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
 .skill .inner .d-flex > div:nth-child(1) {
   width: 40%;
 }
+
+.color-top {color: #e73c7e; font-weight: 700;}
+.color-middle {color: #3cbfe7; font-weight: 700;}
+.color-bottom {color: #4ae73c; font-weight: 700;}
 
 .skill .inner .d-flex > div:nth-child(2) {
   width: 60%;
@@ -456,6 +480,14 @@ header nav > ul > li > a:hover {
 
 .skill .skill__list > li:nth-child(5){
   transition-delay: 1s;
+}
+
+.skill .skill__list > li:nth-child(6){
+  transition-delay: 1.2s;
+}
+
+.skill .skill__list > li:nth-child(7){
+  transition-delay: 1.4s;
 }
 
 .skill.show .skill__list > li{
@@ -566,7 +598,7 @@ header nav > ul > li > a:hover {
 }
 
 /* MODAL */
-#modal {
+#modal , #modal2 {
   /* 화면 정체 영역 덮기 */
   position: fixed;
   top: 0;
@@ -581,17 +613,20 @@ header nav > ul > li > a:hover {
   display: none;
 }
 
-#modal .modal__inner {
+#modal .modal__inner,
+#modal2 .modal__inner {
   width: 80%;
   max-width: 1200px;
   position: relative;
 }
 
-#modal .modal__inner img {
+#modal .modal__inner img,
+#modal2 .modal__inner img {
   width: 100%;
 }
 
-#modal .modal__inner .btn-close {
+#modal .modal__inner .btn-close,
+#modal2 .modal__inner .btn-close {
   font-size: 40px;
   color: #fff;
   background-color: #eaeaee;
@@ -602,7 +637,8 @@ header nav > ul > li > a:hover {
   right: 10px
 }
 
-#modal .modal__inner .btn-close:hover {
+#modal .modal__inner .btn-close:hover,
+#modal2 .modal__inner .btn-close:hover {
   background-color: #333;
 }
 
