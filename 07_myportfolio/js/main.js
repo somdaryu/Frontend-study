@@ -1,4 +1,14 @@
-//https://codepen.io/Ohitis/pen/qaXKGz
+//마우스 커서
+document.addEventListener('mousemove', (e) => {
+  let mouseX = e.pageX + 10; // document의 x좌표값
+  let mouseY = e.pageY + 10; // document의 y좌표값
+
+  let cursor = document.querySelector('.cursor');
+  cursor.style.left = mouseX + 'px';
+  cursor.style.top = mouseY + 'px';
+})
+
+//https://codepen.io/Ohitis/pen/qaXKGz home bg
 $(document).ready(function() {
   // Array for planet colors
   var background = ["rgba(143, 189, 255, 0.7)", "rgba(255,255,255,0.6)", "rgba(255,255,255,0.9)"];
@@ -146,3 +156,30 @@ window.addEventListener('scroll', function () {
     toTopBtn.style.transform = 'translateX(100px)';
   }
 });
+
+
+  var swiper = new Swiper(".mySwiper", {
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 30,
+    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  
+
+  var swiper = new Swiper(".mySwiper2", {
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 30,
+    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+

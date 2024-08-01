@@ -33,14 +33,17 @@
   <!-- ScrollMagic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
+  <div class="cursor">
+    <img src="images/cursor.png" alt="cursor-img">
+  </div>
   <header>
     <div class="inner">
-      <!-- menu -->
-      <span class="material-symbols-outlined">
-        menu
-        </span>
+      <a href="index.html"><img src="images/logo.png" alt="logo"></a>
       <nav class="font-en">
         <ul>
           <li><a href="#home">HOME</a></li>
@@ -75,17 +78,17 @@
 
 
   <!-- ABOUT -->
-  <section id="about" class="about">
+  <section id="about" class="about scroll-spy">
   <div class="inner">
     <h2 class="title font-en">ABOUT</h2>
     <div class="about__wrapper">
       <!-- 좌우명, 이름 -->
       <div class="about__text">
-        <img class="about__img" src="images/profile.jpg" alt="prifile">
-        <strong class="slogan font-en">"Become a man of value."</strong>
-        <strong class="slogan_ko">가치있는 사람이 되자.</strong>
+        <img class="about__img left_move" src="images/profile.png" alt="prifile">
+        <strong class="slogan font-en right_move">"Become a man of value."</strong>
+        <strong class="slogan_ko right_move">가치있는 사람이 되자.</strong>
         
-        <div class="about__name">
+        <div class="about__name left_move">
           <p>유다솜</p>
           <p class="font-en">Yoo Da Som</p>
         </div>
@@ -93,8 +96,8 @@
 
       <!-- 경력사항-->
       <div class="about__text">
-        <h4 class="font-en">Education</h4>
-        <ul>
+        <h4 class="font-en left_move">Education</h4>
+        <ul class="left_move">
           <li>
             <p>2024.06.19 ~ 2024.12.19</p> 
             <p>풀스택 개발자 양성 과정 수료</p>
@@ -104,8 +107,8 @@
             <p>명지전문대학교 정보통신공학과 졸업</p>
           </li>
         </ul>
-        <h4 class="font-en">Career</h4>
-        <ul>
+        <h4 class="font-en left_move">Career</h4>
+        <ul class="left_move">
           <li>
             <p>2022.11.02 ~ 2023.02.13</p> 
             <p>바탕에비뉴 주식회사 (웹 퍼블리셔 주임)</p>
@@ -116,8 +119,8 @@
           </li>
         </ul>
 
-        <h4 class="font-en">Certification</h4>
-        <ul>
+        <h4 class="font-en left_move">Certification</h4>
+        <ul class="left_move">
           <li>
             <p>취득일 : 2021.07.16</p> 
             <p>GTQ 그래픽기술자격 1급</p>
@@ -293,17 +296,18 @@
       <h3 class="title font-en">WORK</h3>
       <div class="port">
         <div class="port__img">
-          <img src="images/work_1.jpg" alt="포트폴리오1">
+          <img src="images/project1.gif" alt="포트폴리오1">
         </div>
         <div class="port__text">
-          <h3>[임시] 프로젝트명 1</h3>
+          <h3>[임시] 클론 영화예매 사이트</h3>
           <ul>
             <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
             <li><span>주요 기능 : </span>
-              vue3를 이용한 영화검색페이지입니다.<br>
+              vue3를 이용한 영화예매 사이트입니다.<br>
               vue3에 대해 학습을 하였고 영화검색을위한 OMDBAPI, route 관리를 위한 vue-router, state 관리를 위한 vuex에 대한 학습, netlify를 이용한 환경변수 설정에 대한 내용들을 학습했습니다.
               <br>
-              전자정부 프레임워크 자바 개발자 양성 과정에서 협업하여 진행한 팀 프로젝트로 고객센터와 예매 페이지를 담당했습니다. 이용하는 고객의 문의를 받거나 공지사항을 게시하는 게시판을 구현하고 예매 기능에는 다른 이용자가 예매 진행중이거나 예매가 완료된 자리는 자리선택을 할 수 없게하고 결제 진행 중 일정시간 안에 결제하지 않으면 예매진행이 취소되는 기능을 구현했습
+              vue3를 이용한 영화예매 사이트입니다.<br>
+              vue3에 대해 학습을 하였고 영화검색을위한 OMDBAPI, route 관리를 위한 vue-router, state 관리를 위한 vuex에 대한 학습, netlify를 이용한 환경변수 설정에 대한 내용들을 학습했습니다.
             </li>
           </ul>
           <div class="btn-group">
@@ -315,10 +319,10 @@
 
       <div class="port">
         <div class="port__img">
-          <img src="images/work_2.jpg" alt="포트폴리오2">
+          <img src="images/project2.gif" alt="project2">
         </div>
         <div class="port__text">
-          <h3>[임시] 프로젝트명 2</h3>
+          <h3>[임시] 스타벅스 메인페이지 클론코딩</h3>
           <ul>
             <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
             <li><span>주요 기능 : </span>
@@ -335,21 +339,40 @@
     </div>
   </section>
 
-  <!-- MODAL -->
+  <!-- MODAL1 -->
   <div id="modal">
     <div class="modal__inner">
-      <img src="images/work_4.jpg" alt="샘플">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/pro-vew1.jpg" alt="project-cut-img"></div>
+          <div class="swiper-slide"><img src="images/pro-view2.jpg" alt="project-cut-img"></div>
+          <div class="swiper-slide"><img src="images/pro-view3.jpg" alt="project-cut-img"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
       <span class="material-symbols-outlined btn-close">close</span>
     </div>
   </div>
 
-    <!-- MODAL -->
+    <!-- MODAL2 -->
     <div id="modal2">
       <div class="modal__inner">
-        <img src="images/work_4.jpg" alt="샘플">
-        <span class="material-symbols-outlined btn-close">close</span>
+              <!-- Swiper -->
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/pro2-view1.jpg" alt="project-cut-img"></div>
+          <div class="swiper-slide"><img src="images/pro2-view2.jpg" alt="project-cut-img"></div>
+          <div class="swiper-slide"><img src="images/pro2-view3.jpg" alt="project-cut-img"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <span class="material-symbols-outlined btn-close">close</span>
       </div>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- FOOTER -->
   <footer>
@@ -369,5 +392,9 @@
     </a>
   </div>
     <script src="js/main.js"></script>
+    
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 </html>

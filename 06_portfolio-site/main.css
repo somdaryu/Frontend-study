@@ -381,6 +381,8 @@ header nav > ul > li > a:hover {
   /* 오른쪽에서 왼쪽으로 나타나는 */
   transform: translateX(150px);
 }
+
+
 .contact .contact__info li:nth-child(2) {
   /* 왼쪽에서 오른쪽으로 나타나는 */
   transform: translateX(-150px);
